@@ -25,12 +25,21 @@ fun main() {
         }
     }
 
-    var numbers = ArrayList<Int>()
-    var i: Int = 0
+    var numbers = arrayListOf(getNumber(level), getNumber(level), getNumber(level))
+    var sum: Int = numbers[0] + numbers[1] + numbers[2]
+    var number: Int = 0
+    var i = 0
 
     while (i < 10) {
         i = i + 1
-        numbers.add(getNumber(level))
+        number = getNumber(level)
+        numbers.add(number)
+
+        for (number in numbers) {
+            print(number)
+            print(" + ")
+        }
+        println(" = ")
     }
 
     print(numbers)
