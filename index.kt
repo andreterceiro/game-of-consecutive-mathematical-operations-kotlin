@@ -26,21 +26,36 @@ fun main() {
     }
 
     var numbers = arrayListOf(getNumber(level), getNumber(level), getNumber(level))
-    var sum: Int = numbers[0] + numbers[1] + numbers[2]
+    var sum: Int = 0
     var number: Int = 0
-    var i = 0
+    var userSum: Int
+    var rightAnswers: Int = 0
 
-    while (i < 10) {
-        i = i + 1
+    while (true) {
         number = getNumber(level)
         numbers.add(number)
+        sum = 0
 
-        for (number in numbers) {
+        numbers.forEachIndexed { index, number ->
             print(number)
-            print(" + ")
-        }
-        println(" = ")
-    }
 
-    print(numbers)
+            if (index != numbers.size - 1) {
+                print(" + ")
+            } else {
+                print(" = ")
+            }
+
+            sum += number
+        }
+
+        userSum = readLine()!!.toInt()
+
+        if (sum != userSum) {
+            println("Wrong answer! The right sum is $sum. Game over.")
+            println("Right answers: " + rightAnswers)
+            return
+        }
+
+        rightAnswers += 1
+    }
 }
