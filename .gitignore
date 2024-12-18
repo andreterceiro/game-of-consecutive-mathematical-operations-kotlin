@@ -1,0 +1,4 @@
+*.jar
+META-INF
+*.class
+main.kotlin_module
