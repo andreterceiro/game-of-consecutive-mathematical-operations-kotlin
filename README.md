@@ -11,4 +11,4 @@ java -jar filename.jar
 
 **Is obvious that you will need to replace "filename" by your file name (with no extension), ok?**
 
-[Elixir varsion](ttps://github.com/andreterceiro/game-of-consecutive-mathematical-operations-elixir).
+[Elixir version](https://github.com/andreterceiro/game-of-consecutive-mathematical-operations-elixir).
